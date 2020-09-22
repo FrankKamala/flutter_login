@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 
 void main (){
@@ -11,6 +12,7 @@ class MenuPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
    return MaterialApp(
+       debugShowCheckedModeBanner: false,
      home: MyMenuPage(
 
      ),
@@ -33,142 +35,48 @@ class MPageState  extends State<MyMenuPage> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      appBar: AppBar(
+        title: Text("Soop Pos"),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          children: <Widget>[
+            ListTile(
+              title: Text("Begin Table Service"),
+              trailing: Icon(Icons.table_chart),
+            ),
+
+            ListTile(
+              title: Text("Quick Order"),
+              trailing: Icon(Icons.fastfood),
+            ),
+
+            ListTile(
+              title: Text("Delivery"),
+              trailing: Icon(Icons.delivery_dining),
+            ),
+
+            ListTile(
+              title: Text("Open Check"),
+              trailing: Icon(Icons.view_comfortable_outlined),
+            ),
+
+            ListTile(
+              title: Text("Manager Screeen"),
+              trailing: Icon(Icons.admin_panel_settings),
+            ),
+
+            ListTile(
+              title: Text("Sign Out"),
+              trailing: Icon(Icons.exit_to_app),
+            ),
+
+          ],
+        ),
+      ),
       backgroundColor: Colors.white,
       body: new Stack(
         fit: StackFit.expand,
-        children: <Widget>[
-          Container(
-            width: double.infinity,
-
-            margin: const EdgeInsets.only(bottom:169),
-            padding: EdgeInsets.all(10),
-
-            decoration: BoxDecoration(
-               // color: Hexcolor("#a6ce38"),
-
-                borderRadius: BorderRadius.circular(30.0)
-            ),
-            child: new Align(
-                   alignment: FractionalOffset.bottomCenter,
-              child: FittedBox(
-                  child: Text("Begin Table Service",
-                    style: TextStyle(
-
-                        color: Colors.blue,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold
-                    ),)
-              ),
-             ),
-          ),
-          Container(
-            margin: const EdgeInsets.only(bottom: 130),
-            padding: EdgeInsets.all(20),
-            width: 150,
-            decoration: BoxDecoration(
-                //color: Hexcolor("#a6ce38"),
-                borderRadius: BorderRadius.circular(30.0)
-            ),
-            child: new Align(
-                alignment: FractionalOffset.bottomCenter,
-              child: FittedBox(
-                  child: Text("Quick Order",
-                    style: TextStyle(
-
-                        color: Colors.blue,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold
-                    ),)
-              ),),
-          ),
-          Container(
-            margin: const EdgeInsets.only(bottom: 100),
-
-            padding: EdgeInsets.all(20),
-            width: 150,
-            decoration: BoxDecoration(
-              //color: Hexcolor("#a6ce38"),
-                borderRadius: BorderRadius.circular(30.0)
-            ),
-            child: new Align(
-                alignment: FractionalOffset.bottomCenter,
-              child: FittedBox(
-                  child: Text("Delivery",
-                    style: TextStyle(
-
-                        color: Colors.blue,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold
-                    ),)
-              ),),
-          ),
-          Container(
-            margin: const EdgeInsets.only(bottom: 70),
-
-            padding: EdgeInsets.all(20),
-            width: 150,
-            decoration: BoxDecoration(
-              //color: Hexcolor("#a6ce38"),
-                borderRadius: BorderRadius.circular(30.0)
-            ),
-            child: new Align(
-                alignment: FractionalOffset.bottomCenter,
-              child: FittedBox(
-                  child: Text("Open Check",
-                    style: TextStyle(
-
-                        color: Colors.blue,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold
-                    ),)
-              ),),
-          ),
-          Container(
-            margin: const EdgeInsets.only(bottom: 40,),
-
-            padding: EdgeInsets.all(20),
-            width: 150,
-            decoration: BoxDecoration(
-              //color: Hexcolor("#a6ce38"),
-                borderRadius: BorderRadius.circular(30.0)
-            ),
-            child: new Align(
-                alignment: FractionalOffset.bottomCenter,
-              child: FittedBox(
-                  child: Text("Manager Screen",
-                    style: TextStyle(
-
-                        color: Colors.blue,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold
-                    ),)
-              ),),
-          ),
-          Container(
-            margin: const EdgeInsets.only(top: 0),
-
-            padding: EdgeInsets.all(20),
-            width: 150,
-            decoration: BoxDecoration(
-              //color: Hexcolor("#a6ce38"),
-                borderRadius: BorderRadius.circular(30.0)
-            ),
-            child: new Align(
-                alignment: FractionalOffset.bottomCenter,
-              child: FittedBox(
-                  child: Text("Sign Out",
-                    style: TextStyle(
-
-                        color: Colors.blue,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold
-                    ),)
-              ),),
-          ),
-          
-
-
-        ],
       ),
     );
 
