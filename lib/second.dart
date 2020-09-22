@@ -17,7 +17,7 @@ class MenuPage extends StatelessWidget {
 
      ),
        theme:new ThemeData(
-           primarySwatch: Colors.blue
+           primarySwatch: Colors.red
        )
 
    );
