@@ -36,9 +36,7 @@ class MPageState  extends State<MyMenuPage> {
       backgroundColor: Colors.white,
       body: new Stack(
         fit: StackFit.expand,
-
         children: <Widget>[
-
           Container(
             width: double.infinity,
 

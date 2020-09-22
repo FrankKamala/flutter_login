@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login_ui/second.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 void main() {
@@ -194,7 +195,12 @@ class _LoginPageState extends State<LoginPage> {
                             fontSize: 18
                         ),),
                       color: Colors.transparent,
-                      onPressed: () {/** */},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => MenuPage()),
+                        );
+                      },
                     )
                   ],
                 )
