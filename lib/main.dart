@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_login_ui/ls/master.dart';
 import 'package:flutter_login_ui/sm/landing.dart';
 import 'package:hexcolor/hexcolor.dart';
 
