@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login_ui/ls/master.dart';
+import 'package:flutter_login_ui/sm/landing.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 void main() {
@@ -6,6 +8,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  var isLarge = true;
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -18,6 +21,14 @@ class MyApp extends StatelessWidget {
       ),
 
     );
+  }
+
+  void checkDeviceScreenSize(BuildContext context) {
+    if (MediaQuery.of(context).size.width > 600) {
+      isLarge = true;
+    } else {
+      isLarge = false;
+    }
   }
 }
 
@@ -37,229 +48,215 @@ class _LoginPageState extends State<LoginPage> {
               child: Image.asset("assets/images/logo.png",),
             ),
           ),
-          Expanded(child: Container(
-            width: double.infinity,
-            height: 400,
-            decoration: new BoxDecoration(
-              image: new DecorationImage(
-                image: new AssetImage('assets/images/center.png'),
-                fit: BoxFit.cover,
-              ),
-            ),
-            child: Container(
-              child: Column(
-                children: <Widget>[
-                  Container(
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 30.0, bottom: 10),
-                        child: Text("Login",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                              fontSize: 20),),
-                      )
-                  ),
-                  Container(
-                      margin: const EdgeInsets.only(top: 10, bottom: 10),
-                      padding: EdgeInsets.only(left: 20, right: 20),
-                      width: 100,
-                      decoration: BoxDecoration(
-                        color: Colors.black12,
-                        borderRadius: BorderRadius.circular(30.0)
-                        ,
-                      ),
-                      child: Center(child: Text("****",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold
-                        ),))
-                  ),
-                  ButtonBar(
-                    alignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      FlatButton(
-                        child: Text('7',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                              fontSize: 20
-                          ),),
-                        color: Colors.transparent,
-                        onPressed: () {/** */},
-                      ),
-                      FlatButton(
-                        child: Text('8'
-                          ,style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                              fontSize: 20
-                          ),),
-                        color: Colors.transparent,
-                        onPressed: () {/** */},
-                      ),
-                      FlatButton(
-                        child: Text('9',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                              fontSize: 20
-                          ),),
-                        color: Colors.transparent,
-                        onPressed: () {/** */},
-                      )
-                    ],
-                  ),
-                  ButtonBar(
-                    alignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      FlatButton(
-                        child: Text('4',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                              fontSize: 20
-                          ),),
-                        color: Colors.transparent,
-                        onPressed: () {/** */},
-                      ),
-                      FlatButton(
-                        child: Text('5',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                              fontSize: 20
-                          ),),
-                        color: Colors.transparent,
-                        onPressed: () {/** */},
-                      ),
-                      FlatButton(
-                        child: Text('6',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                              fontSize: 20
-                          ),),
-                        color: Colors.transparent,
-                        onPressed: () {/** */},
-                      )
-                    ],
-                  ),
-                  ButtonBar(
-                    alignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      FlatButton(
-                        child: Text('1',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                              fontSize: 20
-                          ),),
-                        color: Colors.transparent,
-                        onPressed: () {/** */},
-                      ),
-                      FlatButton(
-                        child: Text('2',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                              fontSize: 20
-                          ),),
-                        color: Colors.transparent,
-                        onPressed: () {/** */},
-                      ),
-                      FlatButton(
-                        child: Text('3',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                              fontSize: 20
-                          ),),
-                        color: Colors.transparent,
-                        onPressed: () {/** */},
-                      )
-                    ],
-                  ),
-                  ButtonBar(
-                    alignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      FlatButton(
-                        child: Text('CLEAR',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                              fontSize: 18
-                          ),),
-                        color: Colors.transparent,
-                        onPressed: () {/** */},
-                      ),
-                      FlatButton(
-                        child: Text('0',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                              fontSize: 20
-                          ),),
-                        color: Colors.transparent,
-                        onPressed: () {/** */},
-                      ),
-                      FlatButton(
-                        child: Text('LOGIN',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white,
-                              fontSize: 18
-                          ),),
-                        color: Colors.transparent,
-                        onPressed: () {/** */},
-                      )
-                    ],
-                  )
-                ],
-              ),
-            ),
-          ))
-          ,
           Container(
-            margin: EdgeInsets.only(top: 0),
-            child: Center(
-              child: Container(
-                child: Column(
-                  children: <Widget>[
-                    Container(
-                      padding: EdgeInsets.all(20),
-                      width: 150,
-                      decoration: BoxDecoration(
-                        color: Hexcolor("#a6ce38"),
-                        borderRadius: BorderRadius.circular(30.0)
-                      ),
-                      child: Center(child: Text("ClockIN",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold
-                      ),)),
+            decoration: BoxDecoration(
+              color: Colors.red,
+              borderRadius: BorderRadius.only(topRight: Radius.circular(25), topLeft: Radius.circular(25), bottomRight: Radius.circular(-100), bottomLeft: Radius.circular(-100))
+            ),
+            child: Column(
+              children: <Widget>[
+                Container(
+                    margin: const EdgeInsets.only(top: 20, bottom: 10),
+                    padding: EdgeInsets.only(left: 20, right: 20),
+                    width: 150,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      color: Colors.black12,
+                      borderRadius: BorderRadius.circular(30.0)
+                      ,
                     ),
-                    Container(
-                      margin: const EdgeInsets.only(top: 10, bottom: 10),
-                      padding: EdgeInsets.all(20),
-                      width: 150,
-                      decoration: BoxDecoration(
-                          color: Hexcolor("#a6ce38"),
-                          borderRadius: BorderRadius.circular(30.0)
-                      ),
-                      child: Center(child: Text("ClockOUT",
+                    child: Center(child: Text("****",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold
+                      ),))
+                ),
+                ButtonBar(
+                  alignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    FlatButton(
+                      child: Text('7',
                         style: TextStyle(
+                            fontWeight: FontWeight.bold,
                             color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold
-                        ),)),
+                            fontSize: 20
+                        ),),
+                      color: Colors.transparent,
+                      onPressed: () {/** */},
+                    ),
+                    FlatButton(
+                      child: Text('8'
+                        ,style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 20
+                        ),),
+                      color: Colors.transparent,
+                      onPressed: () {/** */},
+                    ),
+                    FlatButton(
+                      child: Text('9',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 20
+                        ),),
+                      color: Colors.transparent,
+                      onPressed: () {/** */},
                     )
-
                   ],
                 ),
-              ),
+                ButtonBar(
+                  alignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    FlatButton(
+                      child: Text('4',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 20
+                        ),),
+                      color: Colors.transparent,
+                      onPressed: () {/** */},
+                    ),
+                    FlatButton(
+                      child: Text('5',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 20
+                        ),),
+                      color: Colors.transparent,
+                      onPressed: () {/** */},
+                    ),
+                    FlatButton(
+                      child: Text('6',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 20
+                        ),),
+                      color: Colors.transparent,
+                      onPressed: () {/** */},
+                    )
+                  ],
+                ),
+                ButtonBar(
+                  alignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    FlatButton(
+                      child: Text('1',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 20
+                        ),),
+                      color: Colors.transparent,
+                      onPressed: () {/** */},
+                    ),
+                    FlatButton(
+                      child: Text('2',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 20
+                        ),),
+                      color: Colors.transparent,
+                      onPressed: () {/** */},
+                    ),
+                    FlatButton(
+                      child: Text('3',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 20
+                        ),),
+                      color: Colors.transparent,
+                      onPressed: () {/** */},
+                    )
+                  ],
+                ),
+                ButtonBar(
+                  alignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    FlatButton(
+                      child: Icon(
+                        Icons.backspace
+                      ),
+                      color: Colors.transparent,
+                      onPressed: () {/** */},
+                    ),
+                    FlatButton(
+                      child: Text('0',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 20
+                        ),),
+                      color: Colors.transparent,
+                      onPressed: () {/** */},
+                    ),
+                    FlatButton(
+                      child: Text('OK',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 18
+                        ),),
+                      color: Colors.transparent,
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Landing()),
+                        );
+                      },
+                    )
+                  ],
+                )
+              ],
             ),
+          )
+          ,
+          Container(
+            margin: const EdgeInsets.only(top: 30),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                padding: EdgeInsets.only(left: 20, right: 20),
+                width: 150,
+                height: 50,
+                decoration: BoxDecoration(
+                    color: Hexcolor("#a6ce38"),
+                    borderRadius: BorderRadius.circular(30.0)
+                ),
+                child: Center(child: Text("Clock in",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold
+                  ),)),
+
+              ),
+              Container(
+                margin: const EdgeInsets.only(top: 10),
+                padding: EdgeInsets.only(left: 20, right: 20),
+                width: 150,
+                height: 50,
+                decoration: BoxDecoration(
+                    color: Hexcolor("#a6ce38"),
+                    borderRadius: BorderRadius.circular(30.0)
+                ),
+                child: Center(child: Text("Clock out",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold
+                  ),)),
+              )
+            ],
+          ),
           )
 
         ],
@@ -267,3 +264,5 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
+
+
