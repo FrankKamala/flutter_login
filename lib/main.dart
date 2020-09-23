@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_login_ui/second.dart';
+import 'package:flutter_login_ui/ls/master.dart';
+import 'package:flutter_login_ui/sm/landing.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 void main() {
@@ -7,6 +8,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  var isLarge = true;
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -19,6 +21,14 @@ class MyApp extends StatelessWidget {
       ),
 
     );
+  }
+
+  void checkDeviceScreenSize(BuildContext context) {
+    if (MediaQuery.of(context).size.width > 600) {
+      isLarge = true;
+    } else {
+      isLarge = false;
+    }
   }
 }
 
@@ -198,7 +208,7 @@ class _LoginPageState extends State<LoginPage> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => MenuPage()),
+                          MaterialPageRoute(builder: (context) => Landing()),
                         );
                       },
                     )
@@ -254,3 +264,5 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
+
+
