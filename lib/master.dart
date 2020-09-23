@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'DetailWidget.dart';
+
 class Master extends StatefulWidget{
   @override
   _MasterState createState() => _MasterState();
@@ -21,6 +23,16 @@ class _MasterState extends State<Master>{
        } else {
          isLarge = false;
        }
+
+       //return
+       return Row(children: <Widget>[
+         // Expanded(
+         //  child: OurWidget(){
+         //
+         //  },
+         // ),
+         // isLarge ? Expanded(child: DetailWidget()) : Container(),
+       ]);
 
      }),
 
