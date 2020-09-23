@@ -53,7 +53,7 @@ class MPageState  extends State<MyMenuPage> {
 
             ListTile(
               title: Text("Delivery"),
-              trailing: Icon(Icons.delivery_dining),
+              trailing: Icon(Icons.open_in_new),
             ),
 
             ListTile(
