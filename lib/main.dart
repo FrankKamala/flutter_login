@@ -172,7 +172,7 @@ class _LoginPageState extends State<LoginPage> {
                   children: <Widget>[
                     FlatButton(
                       child: Icon(
-                        Icons.backspace_rounded
+                        Icons.backspace
                       ),
                       color: Colors.transparent,
                       onPressed: () {/** */},

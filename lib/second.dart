@@ -53,17 +53,17 @@ class MPageState  extends State<MyMenuPage> {
 
             ListTile(
               title: Text("Delivery"),
-              trailing: Icon(Icons.delivery_dining),
+              trailing: Icon(Icons.open_in_new),
             ),
 
             ListTile(
               title: Text("Open Check"),
-              trailing: Icon(Icons.view_comfortable_outlined),
+              trailing: Icon(Icons.view_week),
             ),
 
             ListTile(
               title: Text("Manager Screeen"),
-              trailing: Icon(Icons.admin_panel_settings),
+              trailing: Icon(Icons.supervised_user_circle),
             ),
 
             ListTile(
