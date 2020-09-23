@@ -7,6 +7,7 @@ class Master extends StatefulWidget{
 }
 
 class _MasterState extends State<Master>{
+  var isLarge =false;
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -15,7 +16,11 @@ class _MasterState extends State<Master>{
 
     ),
      body: OrientationBuilder(builder: (context, orientation) {
-
+       if (MediaQuery.of(context).size.width > 600) {
+         isLarge = true;
+       } else {
+         isLarge = false;
+       }
 
      }),
 
