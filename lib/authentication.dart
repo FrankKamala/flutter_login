@@ -46,6 +46,7 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           children: <Widget>[
             Container(
+              height: 150,
               child: Center(
                 child: Image.asset("assets/images/logo.png",),
               ),
@@ -225,7 +226,7 @@ class _LoginPageState extends State<LoginPage> {
             )
             ,
             Container(
-              margin: const EdgeInsets.only(top: 20),
+              margin: const EdgeInsets.only(top: 0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

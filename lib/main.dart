@@ -45,7 +45,7 @@ class _SignInPageState extends State<SignInPage> {
               ),
               Container(
                 width: double.infinity,
-                height: 350,
+                height: 300,
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage("assets/images/background.jpg"),
@@ -135,7 +135,7 @@ class _SignInPageState extends State<SignInPage> {
               ),
                   InkWell(
                   child: Container(
-                      margin: const EdgeInsets.only(top: 30, left: 40, right: 40),
+                      margin: const EdgeInsets.only(top: 10, left: 40, right: 40),
                       height: 50,
                       decoration: BoxDecoration(
                       color: Hexcolor("#a6ce38"),
