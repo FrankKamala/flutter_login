@@ -95,9 +95,13 @@ class _SignInPageState extends State<SignInPage> {
                             fontSize: 18,
                           ),
                           decoration: InputDecoration(
-                            focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.red),
-                            ),
+                            border: InputBorder.none,
+                            focusedBorder: InputBorder.none,
+                            enabledBorder: InputBorder.none,
+                            errorBorder: InputBorder.none,
+                            disabledBorder: InputBorder.none,
+                            contentPadding:
+                            EdgeInsets.only(left: 15, bottom: 11, top: 11, right: 15),
                           ),
                         ),
                       ),
@@ -122,10 +126,21 @@ class _SignInPageState extends State<SignInPage> {
                           borderRadius: BorderRadius.circular(30.0)
                       ),
                       child: Center(child: TextField(
+                        autofocus: false,
+                        obscureText: true,
                         style: TextStyle(
                             color: Colors.black,
                             fontSize: 18,
                             background: null
+                        ),
+                        decoration: InputDecoration(
+                          border: InputBorder.none,
+                          focusedBorder: InputBorder.none,
+                          enabledBorder: InputBorder.none,
+                          errorBorder: InputBorder.none,
+                          disabledBorder: InputBorder.none,
+                          contentPadding:
+                          EdgeInsets.only(left: 15, bottom: 11, top: 11, right: 15),
                         ),
                       )),
                     ),
