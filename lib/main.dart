@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_login_ui/sm/landing.dart';
+import 'package:flutter_login_ui/authentication.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 void main() {
@@ -8,265 +7,158 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  var isLarge = true;
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-    ]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
       home: Scaffold(
         body: Container(
-          child: LoginPage(),
+          child: SignInPage(),
         ),
       ),
-
     );
   }
-
-  void checkDeviceScreenSize(BuildContext context) {
-    if (MediaQuery.of(context).size.width > 600) {
-      isLarge = true;
-    } else {
-      isLarge = false;
-    }
-  }
 }
 
-class LoginPage extends StatefulWidget {
+class SignInPage extends StatefulWidget {
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _SignInPageState createState() => _SignInPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _SignInPageState extends State<SignInPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Column(
-        children: <Widget>[
-          Container(
-            child: Center(
-              child: Image.asset("assets/images/logo.png",),
-            ),
-          ),
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.red,
-              borderRadius: BorderRadius.only(topRight: Radius.circular(25), topLeft: Radius.circular(25), bottomRight: Radius.circular(-100), bottomLeft: Radius.circular(-100))
-            ),
-            child: Column(
-              children: <Widget>[
-                Container(
-                    margin: const EdgeInsets.only(top: 20, bottom: 10),
-                    padding: EdgeInsets.only(left: 20, right: 20),
-                    width: 150,
-                    height: 50,
-                    decoration: BoxDecoration(
-                      color: Colors.black12,
-                      borderRadius: BorderRadius.circular(30.0)
-                      ,
-                    ),
-                    child: Center(child: Text("****",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold
-                      ),))
-                ),
-                ButtonBar(
-                  alignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    FlatButton(
-                      child: Text('7',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontSize: 20
-                        ),),
-                      color: Colors.transparent,
-                      onPressed: () {/** */},
-                    ),
-                    FlatButton(
-                      child: Text('8'
-                        ,style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontSize: 20
-                        ),),
-                      color: Colors.transparent,
-                      onPressed: () {/** */},
-                    ),
-                    FlatButton(
-                      child: Text('9',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontSize: 20
-                        ),),
-                      color: Colors.transparent,
-                      onPressed: () {/** */},
-                    )
-                  ],
-                ),
-                ButtonBar(
-                  alignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    FlatButton(
-                      child: Text('4',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontSize: 20
-                        ),),
-                      color: Colors.transparent,
-                      onPressed: () {/** */},
-                    ),
-                    FlatButton(
-                      child: Text('5',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontSize: 20
-                        ),),
-                      color: Colors.transparent,
-                      onPressed: () {/** */},
-                    ),
-                    FlatButton(
-                      child: Text('6',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontSize: 20
-                        ),),
-                      color: Colors.transparent,
-                      onPressed: () {/** */},
-                    )
-                  ],
-                ),
-                ButtonBar(
-                  alignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    FlatButton(
-                      child: Text('1',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontSize: 20
-                        ),),
-                      color: Colors.transparent,
-                      onPressed: () {/** */},
-                    ),
-                    FlatButton(
-                      child: Text('2',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontSize: 20
-                        ),),
-                      color: Colors.transparent,
-                      onPressed: () {/** */},
-                    ),
-                    FlatButton(
-                      child: Text('3',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontSize: 20
-                        ),),
-                      color: Colors.transparent,
-                      onPressed: () {/** */},
-                    )
-                  ],
-                ),
-                ButtonBar(
-                  alignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    FlatButton(
-                      child: Icon(
-                        Icons.backspace
-                      ),
-                      color: Colors.transparent,
-                      onPressed: () {/** */},
-                    ),
-                    FlatButton(
-                      child: Text('0',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontSize: 20
-                        ),),
-                      color: Colors.transparent,
-                      onPressed: () {/** */},
-                    ),
-                    FlatButton(
-                      child: Text('OK',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                            fontSize: 18
-                        ),),
-                      color: Colors.transparent,
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => Landing()),
-                        );
-                      },
-                    )
-                  ],
-                )
-              ],
-            ),
-          )
-          ,
-          Container(
-            margin: const EdgeInsets.only(top: 30),
+      child: SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
+            children: <Widget>[
               Container(
-                padding: EdgeInsets.only(left: 20, right: 20),
-                width: 150,
-                height: 50,
-                decoration: BoxDecoration(
-                    color: Hexcolor("#a6ce38"),
-                    borderRadius: BorderRadius.circular(30.0)
+                child: Center(
+                  child: Image.asset("assets/images/logo.png",),
                 ),
-                child: Center(child: Text("Clock in",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold
-                  ),)),
-
               ),
               Container(
-                margin: const EdgeInsets.only(top: 10),
-                padding: EdgeInsets.only(left: 20, right: 20),
-                width: 150,
-                height: 50,
+                width: double.infinity,
+                height: 350,
                 decoration: BoxDecoration(
-                    color: Hexcolor("#a6ce38"),
-                    borderRadius: BorderRadius.circular(30.0)
-                ),
-                child: Center(child: Text("Clock out",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold
-                  ),)),
-              )
-            ],
-          ),
-          )
+                    image: DecorationImage(
+                        image: AssetImage("assets/images/background.jpg"),
+                        fit: BoxFit.fill
+                    )
 
-        ],
+                ),
+
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      margin: EdgeInsets.only(top: 30, left: 50),
+                      child: Align(
+                        alignment: Alignment.topLeft,
+                        child: new Text("Login:",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 30,
+                              fontWeight: FontWeight.bold
+                          ),),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 20, left: 50),
+                      child: Align(
+                        alignment: Alignment.topLeft,
+                        child: new Text("Email:",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14
+                          ),),
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(top: 1,left: 30, right: 30),
+                      height: 50,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(30.0),
+                      ),
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: TextField(
+                          textAlign: TextAlign.justify,
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 18,
+                          ),
+                          decoration: InputDecoration(
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.red),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 20, left: 50),
+                      child: Align(
+                        alignment: Alignment.topLeft,
+                        child: new Text("Password:",
+                          textAlign: TextAlign.justify,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14
+                          ),),
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(top: 1,left: 30, right: 30),
+                      height: 50,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(30.0)
+                      ),
+                      child: Center(child: TextField(
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 18,
+                            background: null
+                        ),
+                      )),
+                    ),
+                  ],
+                ),
+
+              ),
+                  InkWell(
+                  child: Container(
+                      margin: const EdgeInsets.only(top: 30, left: 40, right: 40),
+                      height: 50,
+                      decoration: BoxDecoration(
+                      color: Hexcolor("#a6ce38"),
+                      borderRadius: BorderRadius.circular(30.0)
+                      ),
+                  child: Center(child: Text("Sign in",
+                    style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold
+                    ),)),
+                    ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => AuthenticationPage()),
+                    );
+                  },
+                  )
+            ],
+          )
       ),
     );
   }
 }
-
 
