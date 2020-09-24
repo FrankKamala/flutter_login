@@ -101,7 +101,7 @@ class _SignInPageState extends State<SignInPage> {
                             errorBorder: InputBorder.none,
                             disabledBorder: InputBorder.none,
                             contentPadding:
-                            EdgeInsets.only(left: 15, bottom: 11, top: 11, right: 15),
+                            EdgeInsets.only(left: 20, bottom: 11, top: 11, right: 20),
                           ),
                         ),
                       ),
@@ -140,7 +140,7 @@ class _SignInPageState extends State<SignInPage> {
                           errorBorder: InputBorder.none,
                           disabledBorder: InputBorder.none,
                           contentPadding:
-                          EdgeInsets.only(left: 15, bottom: 11, top: 11, right: 15),
+                          EdgeInsets.only(left: 20, bottom: 11, top: 11, right: 20),
                         ),
                       )),
                     ),
