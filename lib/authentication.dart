@@ -249,20 +249,14 @@ class _LoginPageState extends State<LoginPage> {
 
                   ),
                   Container(
-                    margin: const EdgeInsets.only(right: 100),
-                    padding: EdgeInsets.only(left: 20, right: 20),
-                    width: 150,
-                    height: 50,
+                    width: 500,
+                    height: 200,
                     decoration: BoxDecoration(
-                        color: Hexcolor("#a6ce38"),
-                        borderRadius: BorderRadius.circular(30.0)
+                      color: Colors.white
                     ),
-                    child: Center(child: Text("Clock out",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold
-                      ),)),
+                    child: Container(
+
+                    ),
                   )
                 ],
               ),
