@@ -43,7 +43,7 @@ class _SignInPageState extends State<SignInPage> {
       decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage("assets/images/bgimage.jpeg"),
-              fit: BoxFit.fill
+              fit: BoxFit.cover
           )
 
       ),
@@ -168,8 +168,8 @@ class _SignInPageState extends State<SignInPage> {
                 ),
                 Container(
                   alignment: Alignment.center,
-                  margin: EdgeInsets.only(left: 185, right: 185),
-                  height: 150,
+                  margin: EdgeInsets.only(left: 393, right: 393.5),
+                  height: 135,
                   decoration: BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage("assets/images/white.jpg"),
