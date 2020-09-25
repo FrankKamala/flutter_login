@@ -39,13 +39,14 @@ class _SignInPageState extends State<SignInPage> {
           child: Column(
             children: <Widget>[
               Container(
+                height: 250,
                 child: Center(
                   child: Image.asset("assets/images/logo.png",),
                 ),
               ),
               Container(
                 width: double.infinity,
-                height: 300,
+                height: 320,
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage("assets/images/background.jpg"),
@@ -57,7 +58,7 @@ class _SignInPageState extends State<SignInPage> {
                 child: Column(
                   children: <Widget>[
                     Container(
-                      margin: EdgeInsets.only(top: 30, left: 50),
+                      margin: EdgeInsets.only(top: 30, left: 300),
                       child: Align(
                         alignment: Alignment.topLeft,
                         child: new Text("Login:",
@@ -69,7 +70,7 @@ class _SignInPageState extends State<SignInPage> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(top: 20, left: 50),
+                      margin: EdgeInsets.only(top: 20, left: 300),
                       child: Align(
                         alignment: Alignment.topLeft,
                         child: new Text("Email:",
@@ -80,7 +81,7 @@ class _SignInPageState extends State<SignInPage> {
                       ),
                     ),
                     Container(
-                      margin: const EdgeInsets.only(top: 1,left: 30, right: 30),
+                      margin: const EdgeInsets.only(top: 1,left: 300, right: 300),
                       height: 50,
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -107,7 +108,7 @@ class _SignInPageState extends State<SignInPage> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(top: 20, left: 50),
+                      margin: EdgeInsets.only(top: 20, left: 300),
                       child: Align(
                         alignment: Alignment.topLeft,
                         child: new Text("Password:",
@@ -119,7 +120,7 @@ class _SignInPageState extends State<SignInPage> {
                       ),
                     ),
                     Container(
-                      margin: const EdgeInsets.only(top: 1,left: 30, right: 30),
+                      margin: const EdgeInsets.only(top: 1,left: 300, right: 300),
                       height: 50,
                       decoration: BoxDecoration(
                           color: Colors.white,
@@ -150,7 +151,7 @@ class _SignInPageState extends State<SignInPage> {
               ),
                   InkWell(
                   child: Container(
-                      margin: const EdgeInsets.only(top: 10, left: 40, right: 40),
+                      margin: const EdgeInsets.only(top: 10, left: 400, right: 400),
                       height: 50,
                       decoration: BoxDecoration(
                       color: Hexcolor("#a6ce38"),

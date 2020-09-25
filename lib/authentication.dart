@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_login_ui/sm/landing.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 // ignore: must_be_immutable
@@ -46,7 +45,7 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           children: <Widget>[
             Container(
-              height: 150,
+              height: 200,
               child: Center(
                 child: Image.asset("assets/images/logo.png",),
               ),
@@ -213,10 +212,10 @@ class _LoginPageState extends State<LoginPage> {
                           ),),
                         color: Colors.transparent,
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => Landing()),
-                          );
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(builder: (context) => Landing()),
+                          // );
                         },
                       )
                     ],
@@ -226,12 +225,12 @@ class _LoginPageState extends State<LoginPage> {
             )
             ,
             Container(
-              margin: const EdgeInsets.only(top: 0),
+              margin: const EdgeInsets.only(top: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    margin: const EdgeInsets.only(left: 20),
+                    margin: const EdgeInsets.only(left: 100),
                     padding: EdgeInsets.only(left: 20, right: 20),
                     width: 150,
                     height: 50,
@@ -248,7 +247,7 @@ class _LoginPageState extends State<LoginPage> {
 
                   ),
                   Container(
-                    margin: const EdgeInsets.only(right: 20),
+                    margin: const EdgeInsets.only(right: 100),
                     padding: EdgeInsets.only(left: 20, right: 20),
                     width: 150,
                     height: 50,
