@@ -48,8 +48,7 @@ class _SignInPageState extends State<SignInPage> {
 
       ),
       child: SingleChildScrollView(
-          child: Expanded(
-            child: Column(
+          child: Column(
               children: <Widget>[
                 Container(
                   margin: EdgeInsets.only(top: 25),
@@ -76,7 +75,7 @@ class _SignInPageState extends State<SignInPage> {
                   child: Column(
                     children: <Widget>[
                       Container(
-                        margin: EdgeInsets.only(top: 30, left: 30),
+                        margin: EdgeInsets.only(top: 30, left: 40),
                         child: Align(
                           alignment: Alignment.topLeft,
                           child: new Text("Login:",
@@ -88,7 +87,7 @@ class _SignInPageState extends State<SignInPage> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 20, left: 30),
+                        margin: EdgeInsets.only(top: 20, left: 40),
                         child: Align(
                           alignment: Alignment.topLeft,
                           child: new Text("Email:",
@@ -126,7 +125,7 @@ class _SignInPageState extends State<SignInPage> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.only(top: 20, left: 30),
+                        margin: EdgeInsets.only(top: 20, left: 40),
                         child: Align(
                           alignment: Alignment.topLeft,
                           child: new Text("Password:",
@@ -194,16 +193,15 @@ class _SignInPageState extends State<SignInPage> {
                         ),)),
                     ),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => AuthenticationPage()),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(builder: (context) => AuthenticationPage()),
+                      // );
                     },
                   ),
                 )
               ],
             ),
-          )
       ),
     );
   }
