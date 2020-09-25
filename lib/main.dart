@@ -35,17 +35,30 @@ class _SignInPageState extends State<SignInPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
+
+      decoration: BoxDecoration(
+          image: DecorationImage(
+
+              image: AssetImage("assets/images/bgimage.jpeg"),
+              fit: BoxFit.fill
+          )
+
+      ),
       child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
               Container(
+                width: 500,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                ),
                 height: 250,
                 child: Center(
                   child: Image.asset("assets/images/logo.png",),
                 ),
               ),
               Container(
-                width: double.infinity,
+                width: 500,
                 height: 320,
                 decoration: BoxDecoration(
                     image: DecorationImage(
@@ -58,7 +71,7 @@ class _SignInPageState extends State<SignInPage> {
                 child: Column(
                   children: <Widget>[
                     Container(
-                      margin: EdgeInsets.only(top: 30, left: 300),
+                      margin: EdgeInsets.only(top: 30, left: 30),
                       child: Align(
                         alignment: Alignment.topLeft,
                         child: new Text("Login:",
@@ -70,7 +83,7 @@ class _SignInPageState extends State<SignInPage> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(top: 20, left: 300),
+                      margin: EdgeInsets.only(top: 20, left: 30),
                       child: Align(
                         alignment: Alignment.topLeft,
                         child: new Text("Email:",
@@ -81,7 +94,7 @@ class _SignInPageState extends State<SignInPage> {
                       ),
                     ),
                     Container(
-                      margin: const EdgeInsets.only(top: 1,left: 300, right: 300),
+                      margin: const EdgeInsets.only(top: 1,left: 30, right: 30),
                       height: 50,
                       decoration: BoxDecoration(
                         color: Colors.white,
@@ -108,7 +121,7 @@ class _SignInPageState extends State<SignInPage> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(top: 20, left: 300),
+                      margin: EdgeInsets.only(top: 20, left: 30),
                       child: Align(
                         alignment: Alignment.topLeft,
                         child: new Text("Password:",
@@ -120,7 +133,7 @@ class _SignInPageState extends State<SignInPage> {
                       ),
                     ),
                     Container(
-                      margin: const EdgeInsets.only(top: 1,left: 300, right: 300),
+                      margin: const EdgeInsets.only(top: 1,left: 30, right: 30),
                       height: 50,
                       decoration: BoxDecoration(
                           color: Colors.white,

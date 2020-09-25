@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hexcolor/hexcolor.dart';
 
+import 'landing_page.dart';
+
 // ignore: must_be_immutable
 class AuthenticationPage extends StatelessWidget {
   var isLarge = true;
@@ -56,7 +58,7 @@ class _LoginPageState extends State<LoginPage> {
               decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage("assets/images/background.jpg"),
-                      fit: BoxFit.fill
+                      fit: BoxFit.cover
                   )
               ),
               child: Column(
@@ -212,10 +214,10 @@ class _LoginPageState extends State<LoginPage> {
                           ),),
                         color: Colors.transparent,
                         onPressed: () {
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(builder: (context) => Landing()),
-                          // );
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => LandingPage()),
+                          );
                         },
                       )
                     ],
