@@ -17,7 +17,12 @@ class MenuPage extends StatelessWidget {
 
      ),
        theme:new ThemeData(
-           primarySwatch: Colors.blue
+           //primarySwatch: Colors.blue
+            primarySwatch: Colors.red,
+        primaryColor: defaultTargetPlatform == TargetPlatform.iOS
+            ? Colors.red
+            : null,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
        )
 
    );
