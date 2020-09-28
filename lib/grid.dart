@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/services.dart';
@@ -38,6 +39,10 @@ class MPageState  extends State<MyMenuPage> {
       DeviceOrientation.landscapeRight,
     ]);
     return new Scaffold(
+      appBar: new AppBar(
+        title: Text("SOOP POS"),
+        elevation: defaultTargetPlatform == TargetPlatform.android ?5.0:0.0,
+      ),
       backgroundColor: Colors.white,
       body: 
       Column(
