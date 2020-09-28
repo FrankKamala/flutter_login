@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_login_ui/grid.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 import 'landing_page.dart';
@@ -216,7 +217,7 @@ class _LoginPageState extends State<LoginPage> {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => LandingPage()),
+                            MaterialPageRoute(builder: (context) => MenuPage()),
                           );
                         },
                       )
