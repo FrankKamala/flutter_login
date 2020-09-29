@@ -71,6 +71,7 @@ class MPageState extends State<MyMenuPage> {
                               child: const Text(
                                 'Begin Table Service',
                                 style: TextStyle(
+                                  color: Color.fromRGBO(21, 190, 206, 19),
                                     fontWeight: FontWeight.normal,
                                     fontSize: 16),
                               ),
@@ -87,6 +88,7 @@ class MPageState extends State<MyMenuPage> {
                             FlatButton(
                               child: const Text('Quick Order',
                                   style: TextStyle(
+                                    color: Color.fromRGBO(21, 190, 206, 19),
                                       fontWeight: FontWeight.normal,
                                       fontSize: 16)),
                               onPressed: () {/* ... */},
@@ -103,6 +105,7 @@ class MPageState extends State<MyMenuPage> {
                             FlatButton(
                               child: const Text('Delivery',
                                   style: TextStyle(
+                                    color: Color.fromRGBO(21, 190, 206, 19),
                                       fontWeight: FontWeight.normal,
                                       fontSize: 15)),
                               onPressed: () {/* ... */},
@@ -126,7 +129,8 @@ class MPageState extends State<MyMenuPage> {
                     Text(
                       "Manager Activities",
                       style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                          TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 20),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -136,6 +140,7 @@ class MPageState extends State<MyMenuPage> {
                             FlatButton(
                               child: const Text('Shift Review',
                                   style: TextStyle(
+                                    color: Color.fromRGBO(21, 190, 206, 19),
                                       fontWeight: FontWeight.normal,
                                       fontSize: 16)),
                               onPressed: () {/* ... */},
@@ -151,6 +156,7 @@ class MPageState extends State<MyMenuPage> {
                             FlatButton(
                               child: const Text('Time Cards',
                                   style: TextStyle(
+                                    color: Color.fromRGBO(21, 190, 206, 19),
                                       fontWeight: FontWeight.normal,
                                       fontSize: 16)),
                               onPressed: () {/* ... */},
@@ -167,6 +173,7 @@ class MPageState extends State<MyMenuPage> {
                             FlatButton(
                               child: const Text('Close Out Day',
                                   style: TextStyle(
+                                    color: Color.fromRGBO(21, 190, 206, 19),
                                       fontWeight: FontWeight.normal,
                                       fontSize: 16)),
                               onPressed: () {/* ... */},
@@ -181,6 +188,7 @@ class MPageState extends State<MyMenuPage> {
                             FlatButton(
                               child: const Text('Open Checks',
                                   style: TextStyle(
+                                    color: Color.fromRGBO(21, 190, 206, 19),
                                       fontWeight: FontWeight.normal,
                                       fontSize: 16)),
                               onPressed: () {/* ... */},
@@ -195,6 +203,7 @@ class MPageState extends State<MyMenuPage> {
                             FlatButton(
                               child: const Text('Change Password',
                                   style: TextStyle(
+                                    color: Color.fromRGBO(21, 190, 206, 19),
                                       fontWeight: FontWeight.normal,
                                       fontSize: 16)),
                               onPressed: () {/* ... */},
@@ -209,6 +218,7 @@ class MPageState extends State<MyMenuPage> {
                             FlatButton(
                               child: const Text('Look Up Customer',
                                   style: TextStyle(
+                                    color: Color.fromRGBO(21, 190, 206, 19),
                                       fontWeight: FontWeight.normal,
                                       fontSize: 16)),
                               onPressed: () {/* ... */},
