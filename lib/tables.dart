@@ -123,7 +123,7 @@ class TableServicePage extends StatelessWidget {
                   }
                 },
                 itemBuilder: (BuildContext context) {
-                  return {'Device status'}
+                  return {'Device Status'}
                       .map((String choice) {
                     return PopupMenuItem<String>(
                       value: choice,
