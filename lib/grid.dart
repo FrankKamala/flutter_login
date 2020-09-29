@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_login_ui/authentication.dart';
+import 'package:flutter_login_ui/tables.dart';
 
 class MenuPage extends StatelessWidget {
   @override
@@ -78,7 +79,9 @@ class MPageState extends State<MyMenuPage> {
                                     fontWeight: FontWeight.normal,
                                     fontSize: 16),
                               ),
-                              onPressed: () {/* ... */},
+                              onPressed: () {
+                                  Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context)=> new TableServicePage()));
+                              },
                             ),
                             Container(
                               height: 60.0,
