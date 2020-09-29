@@ -35,6 +35,14 @@ class MPageState extends State<MyMenuPage> {
       appBar: new AppBar(
         title: Text("SOOP POS"),
         elevation: defaultTargetPlatform == TargetPlatform.android ? 5.0 : 0.0,
+        actions: <Widget>[
+    FlatButton(
+      textColor: Colors.white,
+      onPressed: () {},
+      child: Text("Sign Out"),
+      shape: CircleBorder(side: BorderSide(color: Colors.transparent)),
+    ),
+  ],
       ),
       backgroundColor: Colors.grey[200],
       body: Container(
