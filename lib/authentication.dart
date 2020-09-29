@@ -231,9 +231,8 @@ class _LoginPageState extends State<LoginPage> {
               margin: const EdgeInsets.only(top: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    margin: const EdgeInsets.only(left: 100),
+                children: [Container(
+                    margin: const EdgeInsets.only(left: 20),
                     padding: EdgeInsets.only(left: 20, right: 20),
                     width: 150,
                     height: 50,
@@ -250,14 +249,20 @@ class _LoginPageState extends State<LoginPage> {
 
                   ),
                   Container(
-                    width: 500,
-                    height: 200,
+                    margin: const EdgeInsets.only(right: 20),
+                    padding: EdgeInsets.only(left: 20, right: 20),
+                    width: 150,
+                    height: 50,
                     decoration: BoxDecoration(
-                      color: Colors.white
+                        color: Hexcolor("#a6ce38"),
+                        borderRadius: BorderRadius.circular(30.0)
                     ),
-                    child: Container(
-
-                    ),
+                    child: Center(child: Text("Clock out",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold
+                      ),)),
                   )
                 ],
               ),
