@@ -36,7 +36,7 @@ class MPageState extends State<MyMenuPage> {
         title: Text("SOOP POS"),
         elevation: defaultTargetPlatform == TargetPlatform.android ? 5.0 : 0.0,
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey[200],
       body: Container(
           child: SingleChildScrollView(
         child: Column(
