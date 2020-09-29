@@ -19,16 +19,58 @@ class TableServicePage extends StatelessWidget {
         length: 2,
         child: Scaffold(
           appBar: AppBar(
-            title: Text('Home'),
+            title: Text('Table Service'),
             automaticallyImplyLeading: true,
             leading: IconButton(
                 icon: Icon(
                   Icons.arrow_back_ios,
                   color: Colors.white,
                 ),
-                onPressed: () => {Navigator.pop(context, false)}),
+                onPressed: () => {
+                  Navigator.pop(context, false)
+                  }),
             actions: <Widget>[
               Padding(
+                  padding: EdgeInsets.only(right: 0.0),
+                  child: GestureDetector(
+                    onTap: () {},
+                    child: FlatButton.icon(
+                      icon: Icon(
+                        Icons.help,
+                        color: Colors.white,
+                      ),
+                      color: Colors.red, //`Icon` to display
+                      label: Text(
+                        'HELP',
+                        style: TextStyle(color: Colors.white, fontSize: 16),
+                      ), //`Text` to display
+                      onPressed: () {
+                        //Code to execute when Floating Action Button is clicked
+                        //...
+                      },
+                    ),
+                  )),
+                  Padding(
+                  padding: EdgeInsets.only(right: 0.0),
+                  child: GestureDetector(
+                    onTap: () {},
+                    child: FlatButton.icon(
+                      icon: Icon(
+                        Icons.view_day,
+                        color: Colors.white,
+                      ),
+                      color: Colors.red, //`Icon` to display
+                      label: Text(
+                        'PREVIOUS CHECKS',
+                        style: TextStyle(color: Colors.white, fontSize: 16),
+                      ), //`Text` to display
+                      onPressed: () {
+                        //Code to execute when Floating Action Button is clicked
+                        //...
+                      },
+                    ),
+                  )),
+                  Padding(
                   padding: EdgeInsets.only(right: 0.0),
                   child: GestureDetector(
                     onTap: () {},
@@ -40,6 +82,26 @@ class TableServicePage extends StatelessWidget {
                       color: Colors.red, //`Icon` to display
                       label: Text(
                         'LOOKUP',
+                        style: TextStyle(color: Colors.white, fontSize: 16),
+                      ), //`Text` to display
+                      onPressed: () {
+                        //Code to execute when Floating Action Button is clicked
+                        //...
+                      },
+                    ),
+                  )),
+                  Padding(
+                  padding: EdgeInsets.only(right: 0.0),
+                  child: GestureDetector(
+                    onTap: () {},
+                    child: FlatButton.icon(
+                      icon: Icon(
+                        Icons.exit_to_app,
+                        color: Colors.white,
+                      ),
+                      color: Colors.red, //`Icon` to display
+                      label: Text(
+                        'SIGN OUT',
                         style: TextStyle(color: Colors.white, fontSize: 16),
                       ), //`Text` to display
                       onPressed: () {
@@ -61,7 +123,7 @@ class TableServicePage extends StatelessWidget {
                   }
                 },
                 itemBuilder: (BuildContext context) {
-                  return {'Previous checks', 'Help', 'Switch Account'}
+                  return {'Device status'}
                       .map((String choice) {
                     return PopupMenuItem<String>(
                       value: choice,
