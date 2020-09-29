@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login_ui/dine.dart';
+import 'package:flutter_login_ui/front.dart';
 
-import '../authentication.dart';
-import 'dining_room.dart';
-import 'front_room.dart';
+import './authentication.dart';
+import 'dine.dart';
+import 'front.dart';
 
 class TableServicePage extends StatelessWidget {
   @override
